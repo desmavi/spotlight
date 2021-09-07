@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSAP</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .hero {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            }
+
+        .hero_secondary {
+            position: absolute;
+            top:0;
+            left:0;
+            pointer-events: none;
+            background: #0052D4;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #6FB1FC, #4364F7, #0052D4);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #6FB1FC, #4364F7, #0052D4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+            color: rgb(255, 255, 255);
+        }
+
+        h1,
+        p {
+            font-size: 5rem;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+
+        .hero .heading {
+            color: rgb(255, 255, 255); 
+            padding: 6rem;        }
+
+        .hero_secondary .heading {
+            -webkit-text-stroke: 2px rgb(255, 255, 255);
+            color: transparent;
+            filter: drop-shadow(0 0 .35rem rgb(255, 255, 255));
+        }
+
+        .hero_secondary {
+            clip-path: circle(var(--r, 0) at var(--x, 0) var(--y, 0));         
+        }
+
+
+    </style>
+</head>
+<body>
+    <section id="container">
+        <div class="hero">
+            <h1 class="heading">Hover me</h1>
+        </div>
+
+        <div class="hero hero_secondary" aria-hidden="true">
+            <p class="heading">Welcome</p>
+        </div>
+
+        </div>
+
+    </section>
+    
+    
+
+    
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+<script src="custom.js"></script>
+</html>
